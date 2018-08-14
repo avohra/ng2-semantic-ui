@@ -32,7 +32,7 @@ import { ModalConfig, ModalSize } from "../classes/modal-config";
          #modal>
 
         <!-- Configurable close icon -->
-        <i class="close icon" *ngIf="isClosable" (click)="close()"></i>
+        <i class="close icon" *ngIf="isClosable && isFullScreen" (click)="close()"></i>
         <!-- <ng-content> so that <sui-modal> can be used as a normal component. -->
         <ng-content></ng-content>
         <!-- @ViewChild reference so we can insert elements beside this div. -->
@@ -43,11 +43,11 @@ import { ModalConfig, ModalSize } from "../classes/modal-config";
     styles: [`
 .ui.dimmer {
     overflow-y: auto;
+    display: flex !important;
 }
 
 /* avoid .scrolling as Semantic UI adds unwanted styles. */
 .scroll {
-    position: absolute !important;
     margin-top: 3.5rem !important;
     margin-bottom: 3.5rem !important;
     top: 0;
@@ -209,7 +209,6 @@ export class SuiModal<T, U> implements OnInit, AfterViewInit {
         // Update margin offset to center modal correctly on-screen.
         const element = this._modalElement.nativeElement as Element;
         setTimeout(() => {
-            this._renderer.setStyle(element, "margin-top", `-${element.clientHeight / 2}px`);
             this.updateScroll();
         });
 
