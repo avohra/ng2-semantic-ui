@@ -53,6 +53,11 @@ export class SuiSelect<T, U> extends SuiSelectBase<T, U> implements ICustomValue
         return this._placeholder || this.localeValues.single.placeholder;
     }
 
+    @Input()
+    public set searchDelay(delay:number) {
+        this.searchService.searchDelay = delay;
+    }
+
     public set placeholder(placeholder:string) {
         this._placeholder = placeholder;
     }
