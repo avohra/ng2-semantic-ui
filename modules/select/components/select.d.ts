@@ -10,6 +10,7 @@ export declare class SuiSelect<T, U> extends SuiSelectBase<T, U> implements ICus
     selectedOptionChange: EventEmitter<U>;
     private _placeholder;
     placeholder: string;
+    searchDelay: number;
     constructor(element: ElementRef, localizationService: SuiLocalizationService);
     protected optionsUpdateHook(): void;
     protected queryUpdateHook(): void;
