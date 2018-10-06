@@ -43,6 +43,7 @@ export { SuiDropdownModule as ɵbl } from './modules/dropdown/dropdown.module';
 export { ModalConfig as ɵbm } from './modules/modal/classes/modal-config';
 export { ModalControls as ɵbn } from './modules/modal/classes/modal-controls';
 export { ModalTemplate as ɵbo } from './modules/modal/classes/modal-template';
+export { SuiModalDimmer as ɵdj } from './modules/modal/components/dimmer';
 export { SuiModal as ɵbp } from './modules/modal/components/modal';
 export { SuiModalModule as ɵbr } from './modules/modal/modal.module';
 export { SuiModalService as ɵbq } from './modules/modal/services/modal.service';

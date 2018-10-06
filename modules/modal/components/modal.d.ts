@@ -17,6 +17,7 @@ export declare class SuiModal<T, U> implements OnInit, AfterViewInit {
     onDismiss: EventEmitter<void>;
     private _modalElement;
     size: ModalSize;
+    isCentered: boolean;
     private _isFullScreen;
     isFullScreen: boolean;
     isBasic: boolean;
