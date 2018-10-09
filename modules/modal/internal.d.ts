@@ -3,6 +3,5 @@ export * from "./classes/modal-config";
 export * from "./classes/modal-controls";
 export * from "./classes/modal-template";
 export * from "./components/modal";
-export * from "./components/dimmer";
 export * from "./services/modal.service";
 export * from "./modal.module";
