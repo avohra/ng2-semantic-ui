@@ -21,6 +21,7 @@ export interface IPopupConfig {
     transitionDuration?: number;
     isFlowing?: boolean;
     isInline?: boolean;
+    parent?: Element;
 }
 export declare class PopupConfig implements IPopupConfig {
     header?: string;
@@ -36,5 +37,6 @@ export declare class PopupConfig implements IPopupConfig {
     transitionDuration: number;
     isFlowing: boolean;
     isInline: boolean;
+    parent: Element;
     constructor(defaults?: IPopupConfig);
 }

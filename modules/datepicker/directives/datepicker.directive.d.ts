@@ -22,6 +22,7 @@ export declare class SuiDatepickerDirective extends SuiPopupComponentController<
     placement: PositioningPlacement;
     transition: string;
     transitionDuration: number;
+    popupParent: Element;
     onSelectedDateChange: EventEmitter<Date>;
     onValidatorChange: EventEmitter<void>;
     constructor(renderer: Renderer2, element: ElementRef, componentFactory: SuiComponentFactory, localizationService: SuiLocalizationService);
