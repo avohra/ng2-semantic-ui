@@ -26,6 +26,7 @@ export interface IPopupConfig {
     transitionDuration?:number;
     isFlowing?:boolean;
     isInline?:boolean;
+    parent?:Element;
 }
 
 export class PopupConfig implements IPopupConfig {
@@ -42,6 +43,7 @@ export class PopupConfig implements IPopupConfig {
     public transitionDuration:number;
     public isFlowing:boolean;
     public isInline:boolean;
+    public parent:Element;
 
     constructor(defaults:IPopupConfig = {}) {
         this.placement = PositioningPlacement.TopLeft;

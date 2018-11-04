@@ -98,6 +98,11 @@ export class SuiDatepickerDirective
         this.popup.config.transitionDuration = duration;
     }
 
+    @Input("pickerPopupParent")
+    public set popupParent(element:Element) {
+        this.popup.config.parent = element;
+    }
+
     @Output("pickerSelectedDateChange")
     public onSelectedDateChange:EventEmitter<Date>;
 

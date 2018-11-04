@@ -61,6 +61,8 @@ export abstract class SuiPopupController implements IPopup, OnDestroy {
 
         if (this.popup.config.isInline) {
             this._componentFactory.moveToElement(this._componentRef, this._element.nativeElement.parentElement);
+        } else if (this.popup.config.parent) {
+            this._componentFactory.moveToElement(this._componentRef, this.popup.config.parent);
         } else {
             // Move the generated element to the body to avoid any positioning issues.
             this._componentFactory.moveToDocumentBody(this._componentRef);
