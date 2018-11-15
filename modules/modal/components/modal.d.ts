@@ -29,6 +29,7 @@ export declare class SuiModal<T, U> implements OnInit, AfterViewInit {
     transitionController: TransitionController;
     transition: string;
     transitionDuration: number;
+    modalParent: Element;
     dimBackground: boolean;
     private _isClosing;
     templateSibling: ViewContainerRef;
