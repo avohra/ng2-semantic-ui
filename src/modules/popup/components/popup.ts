@@ -20,7 +20,7 @@ import { TemplatePopupConfig } from "../classes/popup-template-controller";
     <div #templateSibling></div>
 
     <sui-popup-arrow *ngIf="!config.isBasic"
-                     [placement]="config.placement"
+                     [placement]="positioningService ? positioningService.actualPlacement : config.placement"
                      [inverted]="config.isInverted"></sui-popup-arrow>
 </div>
 `,
