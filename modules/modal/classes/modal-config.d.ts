@@ -20,6 +20,7 @@ export declare class ModalConfig<T, U = undefined, V = undefined> {
     mustScroll: boolean;
     transition: string;
     transitionDuration: number;
+    modalParent: Element;
     constructor(context?: T | undefined, isClosable?: boolean);
 }
 export declare class TemplateModalConfig<T, U = undefined, V = undefined> extends ModalConfig<T, U, V> {
